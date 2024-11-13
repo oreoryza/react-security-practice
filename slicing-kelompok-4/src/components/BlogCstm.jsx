@@ -23,25 +23,25 @@ const BlogCstm = () => {
     
     const BlogPostsCard2 = [
       {
-        image: 'https://www.its.ac.id/wp-content/uploads/2023/04/businessman-showing-changes-report-scaled-1.jpg',
+        image: 'src/assets/BlogPicture1.png',
         date: 'May 4th, 2022',
         title: 'The most Popular Business Of the Year',
         author: 'Ranold Jeff.',
-        authorImage: 'https://cdn.prod.website-files.com/60a6b551be6130e4e5b19b98/622fa9eaf563130c69675c85_jeff.webp',
+        authorImage: 'src/assets/BlogPeople1.png',
       },
       {
-        image: 'https://cdn.prod.website-files.com/6100d0111a4ed76bc1b9fd54/61ded9e2811f9930db550b67_shutterstock_1517844719-business%20(1)-p-2000.jpeg',
+        image: 'src/assets/BlogPicture2.png',
         date: 'Apr 27th, 2022',
         title: 'The most Popular Business Of the Year',
         author: 'Patricia Anderson',
-        authorImage: 'https://m.media-amazon.com/images/S/amzn-author-media-prod/md03as8uvet8d7u33t32t3meod._SY450_CR0%2C0%2C450%2C450_.jpg',
+        authorImage: 'src/assets/BlogPeople2.png',
       },
       {
-        image: 'https://i0.wp.com/www.oxbridgeacademy.edu.za/blog/wp-content/uploads/2019/02/business-success-1.jpg?resize=1280%2C640&ssl=1',
+        image: 'src/assets/BlogPicture3.png',
         date: 'Apr 20th, 2022',
         title: 'The most Popular Business Of the Year',
         author: 'Elaine Luna',
-        authorImage: 'https://headway.co/cdn-cgi/image/width=500,quality=100,format=auto,fit=contain/https://assets.headway.co/provider_photos/45041/31fd3a32-049d-11ee-b62e-0a58a9feac02-45041-1686078368866.jpeg',
+        authorImage: 'src/assets/BlogPeople3.png',
       },
     ];
     return (
