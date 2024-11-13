@@ -3,7 +3,7 @@ import { FaLinkedinIn, FaInstagram, FaFacebookF, FaTwitter, FaReact, FaWordpress
 
 const Footer = () => {
   return (
-    <div className="bg-darkblue text-offwhite px-20 py-10 flex justify-around">
+    <div className="bg-darkblue text-offwhite px-20 py-10 flex md:flex-row flex-col justify-around">
       {/* About Us Section */}
       <div className="flex flex-col items-start max-w-xs">
         <h2 className="text-lg font-semibold mb-2">About Us</h2>

@@ -37,7 +37,7 @@ const OurServicesCstm = () => {
   return (
     <div className="bg-gray-50">
     {/* What We Do Section */}
-    <section className="flex flex-col md:flex-row items-center mb-12 bg-offwhite py-20 px-20 gap-8">
+    <section className="flex flex-col md:flex-row items-center mb-12 bg-offwhite py-20 md:px-24 px-10 gap-8">
       {/* Left Column: Image */}
       <div className="md:w-1/2">
         <img
@@ -66,7 +66,7 @@ const OurServicesCstm = () => {
           has a more-or-less normalLorem IpsumLorem Ipsum distribution{" "}
           <br /> of letters, as opposed.
         </p>
-        <div className="flex gap-6">
+        <div className="flex gap-6 md:flex-row flex-col">
           {/* Vision Box */}
           <div className="p-4 bg-[#FFFFFF] rounded-lg shadow-md flex items-center">
             {/* Icon bagian kiri */}

@@ -9,7 +9,7 @@ const OurServices = () => {
       <Header title={'Our Services'} />
       <div className="px-6 py-10 bg-gray-50">
         {/* What We Do Section */}
-        <section className="flex flex-col md:flex-row items-center mb-12 bg-offwhite py-20 px-20 gap-8">
+        <section className="flex flex-col md:flex-row items-center mb-12 bg-offwhite py-20 md:px-24 px-10 gap-8">
           {/* Left Column: Image */}
           <div className="md:w-1/2">
             <img
@@ -30,7 +30,7 @@ const OurServices = () => {
               letters, as opposed, of a page when looking at its layout. The <br /> point of using Lorem Ipsum is that of a page when looking at its <br /> layout. The point of using Lorem Ipsum is thatLorem Ipsum is that it <br /> has a more-or-less
               normalLorem IpsumLorem Ipsum distribution <br /> of letters, as opposed.
             </p>
-            <div className="flex gap-6">
+            <div className="flex gap-6 md:flex-row flex-col">
               {/* Vision Box */}
               <div className="p-4 bg-[#FFFFFF] rounded-lg shadow-md flex items-center">
                 {/* Icon bagian kiri */}

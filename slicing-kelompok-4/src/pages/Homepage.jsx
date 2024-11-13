@@ -12,8 +12,8 @@ import BlogCstm  from "../components/BlogCstm";
 export default function Homepage() {
   return (
     <>
-      <div className="bg-whitecstm font-raleway my-12">
-        <div className="grid grid-cols-2">
+      <div className="bg-whitecstm font-raleway my-12 md:px-24 px-10">
+        <div className="grid md:grid-cols-2 grid-cols-1">
           <div className="content-center justify-self-center">
             <p className="text-2xl font-bold text-peachred">\ We Are Here \</p>
             <h1 className="text-5xl font-bold text-darkblue my-4 leading-[58px]">
