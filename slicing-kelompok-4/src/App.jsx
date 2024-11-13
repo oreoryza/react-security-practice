@@ -1,12 +1,18 @@
-import React from 'react';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
-    <div>
-      <h1 className='bg-black'>Hello, React!</h1>
-      <p className=' font-raleway'>text peach red</p>
-      <p>text peach red</p>
-    </div>
+    <Router>
+      {/* <Navbar /> */}
+        <Routes>
+          <Route path="/" element={<About />} />
+          {/* <Route path="/" element={<Contact />} /> */}
+        </Routes>
+      
+    </Router>
   );
 };
 
