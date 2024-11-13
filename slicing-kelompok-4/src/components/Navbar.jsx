@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <nav className="bg-whitecstm font-raleway">
+    <nav className="bg-whitecstm font-raleway my-2">
       <div className="text-white flex justify-around">
         <Link to="/">
           <div className="flex space-x-2">
