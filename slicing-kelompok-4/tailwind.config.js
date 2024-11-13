@@ -13,7 +13,7 @@ module.exports = {
       peachred: '#FF3E54',
       blackshade: '#252525',
       offwhite: '#F7F7F7',
-      whitecstm: '#081717',
+      whitecstm: '#FFFFFF',
     },
   },
   plugins: [],

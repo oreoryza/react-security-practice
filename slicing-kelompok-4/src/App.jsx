@@ -1,11 +1,14 @@
 import React from 'react';
+import Navbar from './components/Navbar';
+import Portfolio from './components/Portfolio';
+import Homepage from './components/Homepage';
 
 const App = () => {
   return (
     <div>
-      <h1 className='bg-black'>Hello, React!</h1>
-      <p className=' font-raleway'>text peach red</p>
-      <p>text peach red</p>
+      <Navbar />
+      {/* <Portfolio /> */}
+      <Homepage />
     </div>
   );
 };
