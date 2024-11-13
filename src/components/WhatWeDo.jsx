@@ -1,5 +1,13 @@
 import React from 'react';
 import ServiceTeamWork from '../assets/ServiceTeamWork.png';
+import ServiceVision from '../assets/ServiceVision.png';
+import ServiceGoal from '../assets/ServiceGoal.png';
+import ServiceWebDesign from '../assets/ServiceWebDesign.png';
+import ServiceUiUx from '../assets/ServiceUiUx.png';
+import ServiceWebsite from '../assets/ServiceWebsite.png';
+import ServiceApp from '../assets/ServiceApp.png';
+import ServiceHubSpot from '../assets/ServiceHubSpot.png';
+import ServiceEmail from '../assets/ServiceEmail.png';
 
 const OurServices = ({ button }) => {
   return (
@@ -25,8 +33,7 @@ const OurServices = ({ button }) => {
               {/* Vision Box */}
               <div className="p-4 bg-[#FFFFFF] rounded-lg shadow-md flex items-center">
                 <div className="bg-[#ffe8ef] p-5 rounded-lg text-peachred mr-5">
-                  {/* Gunakan gambar di sini */}
-                  <img src="/src/assets/ServiceVision.png" alt="Our Vision" className="w-8 h-8" />
+                  <img src={ServiceVision} alt="Our Vision" className="w-8 h-8" />
                 </div>
                 <div>
                   <p className="text-lg font-semibold text-red-500">Our Vision</p>
@@ -36,7 +43,7 @@ const OurServices = ({ button }) => {
               {/* Goal Box */}
               <div className="p-4 bg-[#FFFFFF] rounded-lg shadow-md flex items-center">
                 <div className="bg-[#ffe8ef] p-5 rounded-lg text-peachred mr-5">
-                  <img src="/src/assets/ServiceGoal.png" alt="Our Goal" className="w-8 h-8" />
+                  <img src={ServiceGoal} alt="Our Goal" className="w-8 h-8" />
                 </div>
                 <div>
                   <p className="text-lg font-semibold text-red-500">Our Goal</p>
@@ -54,19 +61,18 @@ const OurServices = ({ button }) => {
           <h1 className="text-3xl font-bold text-darkblue mb-10">Our Expertise</h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Each card for the services */}
-            <ServiceCard imgSrc="/src/assets/ServiceWebDesign.png" title="Web Design / Development" />
-            <ServiceCard imgSrc="/src/assets/ServiceUiUx.png" title="UI/UX Design" />
-            <ServiceCard imgSrc="/src/assets/ServiceWebsite.png" title="Website Migration" />
-            <ServiceCard imgSrc="/src/assets/ServiceApp.png" title="App Development" />
-            <ServiceCard imgSrc="/src/assets/ServiceHubSpot.png" title="HubSpot Integration" />
-            <ServiceCard imgSrc="/src/assets/ServiceEmail.png" title="Email Marketing" />
+            <ServiceCard imgSrc={ServiceWebDesign} title="Web Design / Development" />
+            <ServiceCard imgSrc={ServiceUiUx} title="UI/UX Design" />
+            <ServiceCard imgSrc={ServiceWebsite} title="Website Migration" />
+            <ServiceCard imgSrc={ServiceApp} title="App Development" />
+            <ServiceCard imgSrc={ServiceHubSpot} title="HubSpot Integration" />
+            <ServiceCard imgSrc={ServiceEmail} title="Email Marketing" />
           </div>
         </section>
       </div>
     </>
   );
 };
-
 
 // ServiceCard Component
 const ServiceCard = ({ imgSrc, title }) => (
@@ -86,4 +92,3 @@ const ServiceCard = ({ imgSrc, title }) => (
 );
 
 export default OurServices;
-

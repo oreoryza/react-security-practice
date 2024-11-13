@@ -2,6 +2,14 @@ import React from 'react';
 import Header from '../components/Header';
 import Quotes from '../components/Quotes';
 
+// Import images
+import BlogPicture1 from '../assets/BlogPicture1.png';
+import BlogPicture2 from '../assets/BlogPicture2.png';
+import BlogPicture3 from '../assets/BlogPicture3.png';
+import BlogPeople1 from '../assets/BlogPeople1.png';
+import BlogPeople2 from '../assets/BlogPeople2.png';
+import BlogPeople3 from '../assets/BlogPeople3.png';
+
 const BlogPostCard = ({ image, date, title, author, readTime, isLarge, authorImage }) => {
   return (
     <div className={`border border-[#FF3E5433] rounded-lg p-4 hover:shadow-lg transition-shadow duration-300 ${isLarge ? 'h-[480px]' : 'h-[225px]'} w-[554px] flex ${isLarge ? 'flex-col' : 'flex-row'} mb-4`}>
@@ -9,8 +17,6 @@ const BlogPostCard = ({ image, date, title, author, readTime, isLarge, authorIma
       <div className={`${isLarge ? '' : 'flex flex-col justify-center'} flex-grow`}>
         <p className="text-gray-500 text-sm">{date}</p>
         <h2 className="text-lg font-semibold text-peachred mb-2">{title}</h2>
-
-        {/* Footer section with author image, name, and read time */}
         <div className="flex items-center mt-10">
           <img src={authorImage} alt="Author" className="w-8 h-8 rounded-full mr-2" />
           <p className="text-gray-600 text-sm font-medium flex-grow">{author}</p>
@@ -42,77 +48,74 @@ const BlogPostCard2 = ({ image, date, title, author, authorImage }) => {
 };
 
 const Blog = () => {
-  // Data for BlogPostCard2
   const BlogPostsCard2 = [
     {
-      image: 'src/assets/BlogPicture1.png',
+      image: BlogPicture1,
       date: 'May 4th, 2022',
       title: 'The most Popular Business Of the Year',
       author: 'Ranold Jeff.',
-      authorImage: 'src/assets/BlogPeople1.png',
+      authorImage: BlogPeople1,
     },
     {
-      image: 'src/assets/BlogPicture2.png',
+      image: BlogPicture2,
       date: 'Apr 27th, 2022',
       title: 'The most Popular Business Of the Year',
       author: 'Patricia Anderson',
-      authorImage: 'src/assets/BlogPeople2.png',
+      authorImage: BlogPeople2,
     },
     {
-      image: 'src/assets/BlogPicture3.png',
+      image: BlogPicture3,
       date: 'Apr 20th, 2022',
       title: 'The most Popular Business Of the Year',
       author: 'Elaine Luna',
-      authorImage: 'src/assets/BlogPeople3.png',
+      authorImage: BlogPeople3,
     },
     {
-      image: 'src/assets/BlogPicture1.png',
+      image: BlogPicture1,
       date: 'May 4th, 2022',
       title: 'The most Popular Business Of the Year',
       author: 'Ranold Jeff.',
-      authorImage: 'src/assets/BlogPeople1.png',
+      authorImage: BlogPeople1,
     },
     {
-      image: 'src/assets/BlogPicture2.png',
+      image: BlogPicture2,
       date: 'Apr 27th, 2022',
       title: 'The most Popular Business Of the Year',
       author: 'Patricia Anderson',
-      authorImage: 'src/assets/BlogPeople2.png',
+      authorImage: BlogPeople2,
     },
     {
-      image: 'src/assets/BlogPicture3.png',
+      image: BlogPicture3,
       date: 'Apr 20th, 2022',
       title: 'The most Popular Business Of the Year',
       author: 'Elaine Luna',
-      authorImage: 'src/assets/BlogPeople3.png',
-    },
-    {
-      image: 'src/assets/BlogPicture1.png',
+      authorImage: BlogPeople3,
+    },    {
+      image: BlogPicture1,
       date: 'May 4th, 2022',
       title: 'The most Popular Business Of the Year',
       author: 'Ranold Jeff.',
-      authorImage: 'src/assets/BlogPeople1.png',
+      authorImage: BlogPeople1,
     },
     {
-      image: 'src/assets/BlogPicture2.png',
+      image: BlogPicture2,
       date: 'Apr 27th, 2022',
       title: 'The most Popular Business Of the Year',
       author: 'Patricia Anderson',
-      authorImage: 'src/assets/BlogPeople2.png',
+      authorImage: BlogPeople2,
     },
     {
-      image: 'src/assets/BlogPicture3.png',
+      image: BlogPicture3,
       date: 'Apr 20th, 2022',
       title: 'The most Popular Business Of the Year',
       author: 'Elaine Luna',
-      authorImage: 'src/assets/BlogPeople3.png',
+      authorImage: BlogPeople3,
     },
   ];
 
   return (
     <>
       <Header title={'Blog'} />
-      {/* Top Section */}
       <div className="text-center my-5">
         <h1 className="font-bold text-2xl text-peachred">\ Our Blog \</h1>
         <h2 className="font-bold text-4xl mt-1 text-darkblue">Latest Post</h2>
@@ -120,38 +123,37 @@ const Blog = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 justify-center px-4 md:px-8 lg:px-16">
         <div className="flex justify-center">
           <BlogPostCard
-            image="src/assets/BlogPicture1.png"
+            image={BlogPicture1}
             date="May 4th, 2022"
             title="The most Popular Business Of the Year"
             author="Ranold Jeff."
             readTime="2 Min Read"
             isLarge={true}
-            authorImage="src/assets/BlogPeople1.png"
+            authorImage={BlogPeople1}
           />
         </div>
         <div className="space-y-2 flex flex-col justify-center">
           <BlogPostCard
-            image="src/assets/BlogPicture2.png"
+            image={BlogPicture2}
             date="Apr 27th, 2022"
             title="The most Popular Business Of the Year"
             author="Patricia Anderson"
             readTime="2 Min Read"
             isLarge={false}
-            authorImage="src/assets/BlogPeople2.png"
+            authorImage={BlogPeople2}
           />
           <BlogPostCard
-            image="src/assets/BlogPicture3.png"
+            image={BlogPicture3}
             date="Apr 27th, 2022"
             title="The most Popular Business Of the Year"
             author="Elaine Luna"
             readTime="2 Min Read"
             isLarge={false}
-            authorImage="src/assets/BlogPeople3.png"
+            authorImage={BlogPeople3}
           />
         </div>
       </div>
 
-      {/* Bottom Section */}
       <div className="bg-offwhite py-10">
         <div className="text-center my-5">
           <h1 className="font-bold text-2xl text-peachred">\ Our Blog \</h1>
