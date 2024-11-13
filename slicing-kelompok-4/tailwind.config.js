@@ -13,12 +13,8 @@ module.exports = {
       peachred: '#FF3E54',
       blackshade: '#252525',
       offwhite: '#F7F7F7',
-<<<<<<< HEAD
-      whitecstm: '#081717',
       white: '#FFFFFF',
-=======
       whitecstm: '#FFFFFF',
->>>>>>> dev-sandy
     },
   },
   plugins: [],
