@@ -1,7 +1,7 @@
 import React from "react";
-import Header from "../component/Header";
-import GetInTouch from "../component/GetInTouch";
-import Quotes from "../component/Quotes";
+import Header from "../components/Header";
+import GetInTouch from "../components/GetInTouch";
+import Quotes from "../components/Quotes";
 
 const Contact = () => {
   return (
