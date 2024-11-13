@@ -3,11 +3,12 @@ import HomepageImage from "../assets/MaskGroup.png";
 import Testimonials from "../components/TestimonialSlider";
 import AboutUs from "../components/AboutUs";
 import Quotes from "../components/Quotes";
-import TeamCstm from "../components/TeamCstm";
-import OurServicesCstm from "../components/OurServiceCstm";
-import GetInTouchCstm from "../components/GetInTouchCstm";
+import Team from "../components/Team";
+import WhatWeDo from "../components/WhatWeDo"
+import GetInTouch from "../components/GetInTouch";
 import Planning from "../components/Planning";
 import BlogCstm  from "../components/BlogCstm";
+import Button from "../components/Buttons/Button";
 
 export default function Homepage() {
   return (
@@ -20,9 +21,7 @@ export default function Homepage() {
               Better Insights For <br />
               Business Growth
             </h1>
-            <button className="bg-peachred text-whitecstm px-6 py-3 rounded-md font-medium">
-              View More
-            </button>
+            <Button text="View More"/>
           </div>
           <div>
             <img src={HomepageImage} alt="Homepage Image" />
@@ -31,10 +30,10 @@ export default function Homepage() {
       </div>
       <AboutUs />
       <Planning/>
-      <OurServicesCstm/>
-      <TeamCstm />
+      <WhatWeDo button={<Button text={"View More"}/>} />
+      <Team data={4} />
       <Testimonials/>
-      <GetInTouchCstm />
+      <GetInTouch bg={"bg-darkblue"} color="text-white" />
       <BlogCstm/>
       <Quotes />
     </>

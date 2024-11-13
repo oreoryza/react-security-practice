@@ -1,14 +1,26 @@
-import React from 'react';
-import { FaLinkedinIn, FaInstagram, FaFacebookF, FaTwitter, FaReact, FaWordpress, FaWix } from 'react-icons/fa';
+import React from "react";
+import {
+  FaLinkedinIn,
+  FaInstagram,
+  FaFacebookF,
+  FaTwitter,
+  FaReact,
+  FaWordpress,
+  FaWix,
+} from "react-icons/fa";
+import ButtonSmall from "./Buttons/ButtonSmall";
 
 const Footer = () => {
   return (
-    <div className="bg-darkblue text-offwhite px-20 py-10 flex md:flex-row flex-col justify-around">
+    <div className="bg-darkblue text-offwhite px-20 py-10 flex flex-wrap md:flex-row flex-col justify-around">
       {/* About Us Section */}
       <div className="flex flex-col items-start max-w-xs">
         <h2 className="text-lg font-semibold mb-2">About Us</h2>
         <div className="w-8 h-1 bg-peachred mb-4"></div>
-        <p className="text-sm mb-6 mt-1">It is a long established <br /> fact that a reader will be distracted <br /> by the readable content of a page <br /> when looking at.</p>
+        <p className="text-sm mb-6 mt-1">
+          It is a long established <br /> fact that a reader will be distracted{" "}
+          <br /> by the readable content of a page <br /> when looking at.
+        </p>
         <div className="flex justify-center space-x-6 mt-9">
           <div className="bg-offwhite p-2 rounded-lg text-peachred">
             <FaLinkedinIn size={20} />
@@ -30,12 +42,12 @@ const Footer = () => {
         <h2 className="text-lg font-semibold mb-2">Services</h2>
         <div className="w-8 h-1 bg-peachred mb-4"></div>
         <ul className="space-y-2 text-sm">
-          <li className='pt-1'>Web Design/Development</li>
-          <li className='pt-1'>App Development</li>
-          <li className='pt-1'>UI/UX Design</li>
-          <li className='pt-1'>HubSpot Integration</li>
-          <li className='pt-1'>Email Marketing</li>
-          <li className='pt-1'>Website Migration</li>
+          <li className="pt-1">Web Design/Development</li>
+          <li className="pt-1">App Development</li>
+          <li className="pt-1">UI/UX Design</li>
+          <li className="pt-1">HubSpot Integration</li>
+          <li className="pt-1">Email Marketing</li>
+          <li className="pt-1">Website Migration</li>
         </ul>
       </div>
 
@@ -78,11 +90,20 @@ const Footer = () => {
       <div className="flex flex-col items-start max-w-xs">
         <h2 className="text-lg font-semibold mb-2">Subscribe Us</h2>
         <div className="w-8 h-1 bg-peachred mb-4"></div>
-        <p className="text-sm mb-6">It is a long established <br /> fact that a reader will be <br /> distracted by the readable</p>
+        <p className="text-sm mb-6">
+          It is a long established <br /> fact that a reader will be <br />{" "}
+          distracted by the readable
+        </p>
         <form className="flex w-full space-x-2 rounded-lg">
-          <input type="email" placeholder="Email" className="p-2 rounded w-full" />
+          <input
+            type="email"
+            placeholder="Email"
+            className="p-2 rounded w-full"
+          />
         </form>
-        <button className="bg-peachred text-white px-4 py-2 rounded-lg mt-3 ml-28">Submit</button>
+        <div className="flex justify-end w-full py-4">
+          <ButtonSmall type={"submit"} text={"Submit"} />
+        </div>
       </div>
     </div>
   );

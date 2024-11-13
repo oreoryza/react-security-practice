@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import NothingGreat from "../assets/NothingGreat.png";
 import MoreThan from "../assets/MoreThan.png";
 import EnjoyWith from "../assets/EnjoyWith.png";
@@ -9,6 +9,23 @@ import Quotes from "../components/Quotes";
 import ButtonSmall from "../components/Buttons/ButtonSmall";
 
 export default function Portfolio() {
+  const [activeImage, setActiveImage] = useState("");
+  const [activeButton, setActiveButton] = useState(null);
+
+  const images = {
+    ALL: [NothingGreat, MoreThan, EnjoyWith, TheMost, AvailableBalance],
+    LIFE: [NothingGreat, MoreThan, EnjoyWith, TheMost],
+    MOMENTS: [NothingGreat, MoreThan, EnjoyWith],
+    NATURE: [NothingGreat, MoreThan],
+    STORIES: [EnjoyWith, TheMost, AvailableBalance],
+    TRAVEL: [NothingGreat, TheMost],
+  };
+
+  const handleButtonClick = (buttonName) => {
+    setActiveImage(images[buttonName]);
+    setActiveButton(buttonName)
+  };
+
   return (
     <>
       <Header title={"Portfolio"} />
@@ -16,55 +33,26 @@ export default function Portfolio() {
         <p className="text-2xl font-bold text-peachred">\ Portfolio \</p>
         <h1 className="text-darkblue text-4xl font-bold mt-2">Our Work</h1>
         <div className="mt-16 text-blackshade/50 text-sm font-semibold">
-          <button className="px-9 py-3 border text-whitecstm bg-peachred border-blackshade/50 rounded-l-lg">
-            ALL
+          {Object.keys(images).map((button) => (
+            <button
+            key={button}
+            className={`px-9 py-3 border ${activeButton === button ? 'bg-peachred text-whitecstm' : 'border-blackshade/50'}`}
+            onClick={() => handleButtonClick(button)}
+          >
+            {button}
           </button>
-          <button className="px-9 py-3 border-y border-r border-blackshade/50 ">
-            LIFE
-          </button>
-          <button className="px-9 py-3 border-y border-r border-blackshade/50 ">
-            MOMENTS
-          </button>
-          <button className="px-9 py-3 border-y border-r border-blackshade/50 ">
-            NATURE
-          </button>
-          <button className="px-9 py-3 border-y border-blackshade/50 ">
-            STORIES
-          </button>
-          <button className="px-9 py-3 border border-blackshade/50 rounded-r-lg">
-            TRAVEL
-          </button>
+          ))}
         </div>
-        <div className="mt-16 mx-36">
-          <div className="grid grid-cols-3">
-            <div className="col-span-2">
-              <img src={NothingGreat} alt="" className="object-cover" />
-            </div>
-            <div className="justify-items-end">
-              <img src={MoreThan} alt="" className="object-cover" />
-            </div>
+        {activeImage.length > 0 && (
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-32">
+            {activeImage.map((image, index) => (
+              <img key={index} src={image} alt={`Portfolio ${index}`} className="w-full h-auto rounded-md" />
+            ))}
           </div>
-        </div>
-        <div className="mt-16 mx-36">
-          <div className="flex flex-row">
-            <div className="basis-1/3">
-              <img src={EnjoyWith} alt="" className="object-cover" />
-            </div>
-            <div className="basis-1/2 justify-items-center">
-              <img src={TheMost} alt="" className="object-cover" />
-            </div>
-            <div className="basis-1/2 justify-items-end">
-              <img
-                src={AvailableBalance}
-                alt=""
-                className="h-full object-cover rounded-lg"
-              />
-            </div>
-          </div>
-        </div>
-        <div className="my-16 mx-36">
-          <ButtonSmall text={"Get In Touch"} />
-        </div>
+        )}
+      </div>
+      <div className="flex justify-center w-full py-10">
+        <ButtonSmall text="Get In Touch"/>
       </div>
       <Quotes />
     </>
