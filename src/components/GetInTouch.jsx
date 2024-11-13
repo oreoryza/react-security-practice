@@ -53,7 +53,9 @@ const GetInTouch = ({bg="bg-peachred/[.05]", color="text-darkblue"}) => {
                 required
               />
             </div>
-            <Button type={"submit"} text={"Send Now"} />
+            <div className='flex justify-start w-full'>
+              <Button type={"submit"} text={"Send Now"} />
+            </div>
           </form>
           <div className="bg-white flex flex-col justify-between rounded-lg md:p-8 p-4 lg:min-h-[500px] lg:max-h-[500px] min-h-[400px]">
             <div className="flex flex-wrap lg:flex-col flex-row">

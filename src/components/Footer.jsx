@@ -7,6 +7,7 @@ import FooterTwitter from '../assets/FooterTwitter.png';
 import ReactIcon from '../assets/FooterReact.png';
 import WordPressIcon from '../assets/FooterWordPress.png';
 import WixIcon from '../assets/FooterWix.png';
+import ButtonSmall from './Buttons/ButtonSmall';
 
 const Footer = () => {
   return (
@@ -75,7 +76,9 @@ const Footer = () => {
         <form className="flex w-full space-x-2 rounded-lg">
           <input type="email" placeholder="Email" className="p-2 rounded w-full" />
         </form>
-        <button className="bg-peachred text-white px-4 py-2 rounded-lg mt-3 ml-28">Submit</button>
+        <div className='flex justify-end w-full py-4'>
+          <ButtonSmall type="submit" text="Submit" />
+        </div>
       </div>
     </div>
   );

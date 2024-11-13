@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import NothingGreat from "../assets/NothingGreat.png";
 import MoreThan from "../assets/MoreThan.png";
 import EnjoyWith from "../assets/EnjoyWith.png";
@@ -12,6 +12,7 @@ export default function Portfolio() {
   const [activeImage, setActiveImage] = useState("");
   const [activeButton, setActiveButton] = useState(null);
 
+  // IMAGES PER BUTTON OR GENRE
   const images = {
     ALL: [NothingGreat, MoreThan, EnjoyWith, TheMost, AvailableBalance],
     LIFE: [NothingGreat, MoreThan, EnjoyWith, TheMost],
@@ -25,6 +26,11 @@ export default function Portfolio() {
     setActiveImage(images[buttonName]);
     setActiveButton(buttonName)
   };
+
+  // DEFAULT BUTTON ALL
+  useEffect(() => {
+    handleButtonClick("ALL");
+  }, []);
 
   return (
     <>

@@ -22,27 +22,26 @@ export default function Planning() {
       </h3>
       {/* Tambahkan garis di bawah judul */}
       <div className="flex items-center gap-2 mb-4">
-        <div className="w-14 h-1 bg-peachred"></div> {/* Garis panjang */}
-        <div className="w-4 h-1 bg-peachred"></div> {/* Garis pendek */}
+        <div className="w-14 h-1.5 bg-peachred rounded-lg"></div> {/* Garis panjang */}
+        <div className="w-4 h-1.5 bg-peachred rounded-lg"></div> {/* Garis pendek */}
       </div>
       <p className="text-gray-600 text-left">
         It is a long established fact that a reader <br /> will be distra by the
-        readable content of <br /> a page when looking at its layout, when{" "}
-        <br /> looking at its layout
+        readable content of a page
       </p>
     </div>
   );
   return (
     <>
       {/* Services Section */}
-      <section className="text-center my-12">
+      <section className="text-center font-raleway md:px-32 px-10 my-12">
         <h2 className="text-xl text-peachred font-semibold mb-2">
           \ Planning \
         </h2>
         <h1 className="text-3xl font-bold text-darkblue mb-10">
           Our Process
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
           {/* Each card for the services */}
           <ServiceCard icon={Research} title="Research" number={1} />
           <ServiceCard icon={Design} title="Design" number={2} />

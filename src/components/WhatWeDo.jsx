@@ -14,14 +14,14 @@ const OurServices = ({ button }) => {
     <>
       <div className="font-raleway">
         {/* What We Do Section */}
-        <section className="flex flex-col md:flex-row items-center mb-12 bg-offwhite py-20 md:px-24 px-10 gap-8">
+        <section className="flex flex-col xl:flex-row items-center mb-12 bg-offwhite py-20 md:px-32 px-10 gap-8">
           {/* Left Column: Image */}
-          <div className="md:w-1/2">
+          <div>
             <img src={ServiceTeamWork} alt="Team working together" className="w-full h-auto rounded-lg shadow-lg" />
           </div>
 
           {/* Right Column: Text */}
-          <div className="md:w-1/2">
+          <div>
             <h2 className="text-xl text-peachred font-semibold mb-2">\ What We Do \</h2>
             <h1 className="text-4xl font-bold text-darkblue mb-4">
               We Develop Products That <br /> People Love to Use.
@@ -29,24 +29,24 @@ const OurServices = ({ button }) => {
             <p className="text-gray-600 mb-6">
               It is a long established fact that a reader will be distracted by the <br /> readable content of a page when looking at its layout.
             </p>
-            <div className="flex gap-6 md:flex-row flex-col">
+            <div className="flex gap-2 md:flex-row flex-col">
               {/* Vision Box */}
-              <div className="p-4 bg-[#FFFFFF] rounded-lg shadow-md flex items-center">
-                <div className="bg-[#ffe8ef] p-5 rounded-lg text-peachred mr-5">
-                  <img src={ServiceVision} alt="Our Vision" className="w-8 h-8" />
+              <div className="p-3 bg-[#FFFFFF] rounded-lg shadow-md flex items-center">
+                <div className="bg-[#ffe8ef] p-3 rounded-lg text-peachred mr-5">
+                  <img src={ServiceVision} alt="Our Vision" className="min-w-8 min-h-8" />
                 </div>
-                <div>
-                  <p className="text-lg font-semibold text-red-500">Our Vision</p>
+                <div className='min-w-32 hyphens-auto'>
+                  <p className="font-semibold text-red-500">Our Vision</p>
                   <p className="text-gray-600">It is a long established fact that</p>
                 </div>
               </div>
               {/* Goal Box */}
-              <div className="p-4 bg-[#FFFFFF] rounded-lg shadow-md flex items-center">
-                <div className="bg-[#ffe8ef] p-5 rounded-lg text-peachred mr-5">
-                  <img src={ServiceGoal} alt="Our Goal" className="w-8 h-8" />
+              <div className="bg-[#FFFFFF] p-3 rounded-lg shadow-md flex items-center">
+                <div className="bg-[#ffe8ef] p-3 rounded-lg text-peachred mr-5">
+                  <img src={ServiceGoal} alt="Our Goal" className="min-w-8 min-h-8" />
                 </div>
-                <div>
-                  <p className="text-lg font-semibold text-red-500">Our Goal</p>
+                <div className='min-w-32 hyphens-auto'>
+                  <p className="font-semibold text-red-500">Our Goal</p>
                   <p className="text-gray-600">It is a long established fact that</p>
                 </div>
               </div>
@@ -56,10 +56,10 @@ const OurServices = ({ button }) => {
         </section>
 
         {/* Services Section */}
-        <section className="text-center">
+        <section className="text-center py-10 md:px-32 px-10">
           <h2 className="text-xl text-peachred font-semibold mb-2">\ Services \</h2>
           <h1 className="text-3xl font-bold text-darkblue mb-10">Our Expertise</h1>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-8">
             {/* Each card for the services */}
             <ServiceCard imgSrc={ServiceWebDesign} title="Web Design / Development" />
             <ServiceCard imgSrc={ServiceUiUx} title="UI/UX Design" />
@@ -85,7 +85,7 @@ const ServiceCard = ({ imgSrc, title }) => (
       <div className="w-14 h-1 bg-peachred"></div>
       <div className="w-4 h-1 bg-peachred"></div>
     </div>
-    <p className="text-gray-600 text-left">
+    <p className="min-w-56 text-left">
       It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
     </p>
   </div>

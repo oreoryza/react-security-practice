@@ -49,19 +49,19 @@ export default function Navbar() {
       {clicked && (
         <ul className="text-darkblue md:hidden flex flex-col text-base font-semibold items-center space-y-4 mt-4">
           <Link to="/about">
-            <li>About</li>
+            <li><button onClick={toggleHamburger}>About</button></li>
           </Link>
           <Link to="/ourservices">
-            <li>Our Services</li>
+            <li><button onClick={toggleHamburger}>Our Services</button></li>
           </Link>
           <Link to="/portfolio">
-            <li>Portfolio</li>
+            <li><button onClick={toggleHamburger}>Portfolio</button></li>
           </Link>
           <Link to="/blog">
-            <li>Blog</li>
+            <li><button onClick={toggleHamburger}>Blog</button></li>
           </Link>
           <Link to="/contact">
-            <li>Contact</li>
+            <li><button onClick={toggleHamburger}>Contact</button></li>
           </Link>
           <li>
             <ButtonSmall text={"Get In Touch"} />

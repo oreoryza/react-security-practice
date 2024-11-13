@@ -4,7 +4,7 @@ import React  from "react";
 const TestimonialSlider = () => {
   
   return (
-    <div className="w-full  mx-auto p-6">
+    <div className="w-full  mx-auto p-6 py-24">
     <h2 className="text-center text-2xl font-bold text-peachred mb-6">
       \ From our Customers \
     </h2>

@@ -17,13 +17,14 @@ export default function Homepage() {
         <div className="grid md:grid-cols-2 grid-cols-1">
           <div className="content-center justify-self-center">
             <p className="text-2xl font-bold text-peachred">\ We Are Here \</p>
-            <h1 className="text-5xl font-bold text-darkblue my-4 leading-[58px]">
+            <img className="md:hidden flex py-4" src={HomepageImage} alt="Homepage Image" />
+            <h1 className="md:text-5xl text-4xl font-bold text-darkblue my-4 md:leading-[58px]">
               Better Insights For <br />
               Business Growth
             </h1>
             <Button text="View More"/>
           </div>
-          <div>
+          <div className="md:flex hidden">
             <img src={HomepageImage} alt="Homepage Image" />
           </div>
         </div>
