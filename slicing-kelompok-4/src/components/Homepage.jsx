@@ -1,6 +1,7 @@
 import React from "react";
 import HomepageImage from "../assets/MaskGroup.png";
 import SamualKarl from "../assets/SamualKarl.png";
+import Testimonials from "./TestimonialSlider";
 
 export default function Homepage() {
   return (
@@ -22,7 +23,7 @@ export default function Homepage() {
           </div>
         </div>
       </div>
-
+      <Testimonials/>
       {/* <div className="bg-whitecstm font-raleway text-center mt-24">
         <p className="text-2xl font-bold text-peachred">
           \ From our Customers \
