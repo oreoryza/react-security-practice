@@ -51,7 +51,9 @@ const OurServices = ({ button }) => {
                 </div>
               </div>
             </div>
-            {button}
+            <div className='mt-8'>
+              {button}
+            </div>
           </div>
         </section>
 

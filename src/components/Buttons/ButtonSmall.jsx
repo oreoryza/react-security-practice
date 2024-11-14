@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const ButtonSmall = ({ type, text, onClick }) => {
   return (
-    <button type={type} className="font-raleway bg-peachred text-white font-medium py-2 px-4 rounded-md" onClick={onClick}>
+    <button type={type} className="font-raleway bg-peachred text-white font-medium py-2 px-4 rounded-md hover:brightness-75 transition-all duration-250" onClick={onClick}>
         {text}
     </button>
   );

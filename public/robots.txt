@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://slicing-kelompok-4.vercel.app/

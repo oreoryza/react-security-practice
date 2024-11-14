@@ -32,7 +32,7 @@ export default function Homepage() {
       <AboutUs />
       <Planning/>
       <WhatWeDo button={<Button text={"View More"}/>} />
-      <Team data={4} />
+      <Team data={4} shadow="md:shadow-none shadow-md" rounded="rounded-lg" />
       <Testimonials/>
       <GetInTouch bg={"bg-darkblue"} color="text-white" />
       <BlogCstm/>

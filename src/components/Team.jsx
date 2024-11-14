@@ -4,7 +4,7 @@ import meghan from '../assets/meghan.png';
 import yvonne from '../assets/yvonne.png';
 import diana from '../assets/diana.png';
 
-const Team = ({data=8}) => {
+const Team = ({data=8, shadow="shadow-md", rounded}) => {
   // DATA TEAM MEMBER
   const [teamMembers] = useState([
     {
@@ -55,13 +55,17 @@ const Team = ({data=8}) => {
     <div className='md:px-32 px-10 pt-24 font-raleway'>
         <h2 className="font-bold text-2xl text-peachred text-center">\ Team \</h2>
         <h1 className="font-bold text-4xl text-darkblue text-center">Our Leaders</h1>
-        <div className='grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
+        <div className='grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 mt-8'>
           {/* LOOPING SHOW MEMBER */}
           {members.map((member, index) => (
-            <div key={index} className='flex flex-col justify-center items-center mt-8'>
-              <img className='max-w-56' src={member.image} alt="" />
-              <h1 className='font-bold text-xl mt-8 text-peachred'>{member.name}</h1>
-              <p className='font-medium py-2'>{member.position}</p>
+            <div key={index} className={`group flex flex-col justify-center items-center ${shadow} rounded-lg overflow-hidden`}>
+              <div className={`overflow-hidden ${rounded}`}>
+                <img className='scale-105 group-hover:scale-110 tarnsition-transform duration-300' src={member.image} alt="" />
+              </div>
+              <div className='text-center py-4'>
+                <h1 className='font-bold text-xl text-peachred'>{member.name}</h1>
+                <p className='font-medium mt-2'>{member.position}</p>
+              </div>
             </div>
           ))}
         </div>

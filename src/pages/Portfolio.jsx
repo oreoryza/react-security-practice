@@ -6,7 +6,6 @@ import TheMost from "../assets/TheMost.png";
 import AvailableBalance from "../assets/AvailableBalance.png";
 import Header from "../components/Header";
 import Quotes from "../components/Quotes";
-import ButtonSmall from "../components/Buttons/ButtonSmall";
 
 export default function Portfolio() {
   const [activeImage, setActiveImage] = useState("");
@@ -15,7 +14,7 @@ export default function Portfolio() {
   // IMAGES PER BUTTON OR GENRE
   const images = {
     ALL: [NothingGreat, MoreThan, EnjoyWith, TheMost, AvailableBalance],
-    LIFE: [NothingGreat, MoreThan, EnjoyWith, TheMost],
+    LIFE: [MoreThan, EnjoyWith, TheMost],
     MOMENTS: [NothingGreat, MoreThan, EnjoyWith],
     NATURE: [NothingGreat, MoreThan],
     STORIES: [EnjoyWith, TheMost, AvailableBalance],
@@ -35,14 +34,14 @@ export default function Portfolio() {
   return (
     <>
       <Header title={"Portfolio"} />
-      <div className="bg-whitecstm font-raleway text-center mt-24">
+      <div className="bg-whitecstm font-raleway text-center mt-24 md:px-32 px-10">
         <p className="text-2xl font-bold text-peachred">\ Portfolio \</p>
         <h1 className="text-darkblue text-4xl font-bold mt-2">Our Work</h1>
-        <div className="mt-16 text-blackshade/50 text-sm font-semibold">
+        <div className="mt-16 text-blackshade/50 text-sm font-semibold md:rounded-full rounded-lg w-fit mx-auto">
           {Object.keys(images).map((button) => (
             <button
             key={button}
-            className={`px-9 py-3 border ${activeButton === button ? 'bg-peachred text-whitecstm' : 'border-blackshade/50'}`}
+            className={`px-6 py-3 rounded-full overflow-hidden ${activeButton === button ? 'bg-darkblue text-whitecstm' : 'border-blackshade/50'} hover:bg-darkblue hover:text-whitecstm transition-colors duration-300`}
             onClick={() => handleButtonClick(button)}
           >
             {button}
@@ -50,15 +49,12 @@ export default function Portfolio() {
           ))}
         </div>
         {activeImage.length > 0 && (
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 px-32">
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-rows-auto gap-4">
             {activeImage.map((image, index) => (
-              <img key={index} src={image} alt={`Portfolio ${index}`} className="w-full h-auto rounded-md" />
+              <img key={index} src={image} alt={`Portfolio ${index}`} className="w-full rounded-md hover:scale-105 transition-transform duration-300" />
             ))}
           </div>
         )}
-      </div>
-      <div className="flex justify-center w-full py-10">
-        <ButtonSmall text="Get In Touch"/>
       </div>
       <Quotes />
     </>
